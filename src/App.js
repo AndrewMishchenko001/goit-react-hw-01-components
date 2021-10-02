@@ -1,5 +1,7 @@
-import Profile from "./Components/Profile";
-import user from "./Components/Profile/user.json"
+import Profile from "./Components/Profile/Profile";
+import user from "./Components/Profile/user.json";
+import Statistics from "./Components/Statistic/Statistic";
+import statisticalData from './Components/Statistic/statistic.json';
 // import './App.css';
 
 
@@ -13,7 +15,9 @@ function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-    </>)
+      <Statistics title="Upload stats" stats={statisticalData} />;
+</>);
+  
 }
        
 export default App;
