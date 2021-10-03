@@ -1,4 +1,6 @@
-export default function Statistics({stats, title}) {
+import PropTypes from 'prop-types'
+
+export default function Statistics({ stats, title }) {
     return(
         <section class="statistics">
             {title && <h2 className="title">{title}</h2>}
@@ -11,5 +13,15 @@ export default function Statistics({stats, title}) {
             </ul>
     </section>)
 }
+
+Statistics.propTypes = {
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+
+    })),
+  }
+
         
                 

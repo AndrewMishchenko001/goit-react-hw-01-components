@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types' 
 import defaultImage from '../../Components/default.jpg'
 
 export default function Profile({ name, tag, location, avatar = defaultImage, stats }) {
@@ -29,4 +30,11 @@ export default function Profile({ name, tag, location, avatar = defaultImage, st
                 </li>
             </ul>
         </div>);
+}
+
+Profile.propTypes = {
+     name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.objectOf(PropTypes.number)
 }
