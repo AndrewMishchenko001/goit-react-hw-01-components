@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types'
+import s from "../Statistic/Statistic.module.css"
 
 export default function Statistics({ stats, title }) {
+    const colors = ['#FFD700', '#4CAF50', '#2196F3', '#E91E63', '#607D8B'];
     return(
-        <section class="statistics">
-            {title && <h2 className="title">{title}</h2>}
-            <ul class="stat-list">
-{stats.map((statItem )=> (
-    <li key={statItem.id} class="item">
-                <span class="label">{statItem.label}</span>
-                <span class="percentage">{statItem.percentage}</span>
+        <section className={s.statistics}>
+            {title && <h2 className={s.title}>{title}</h2>}
+            <ul className={s.statList}>
+{stats.map((statItem, index )=> (
+    <li key={statItem.id} className={s.item}
+        style={{ backgroundColor: colors[index] }}>
+        
+                <span className={s.label}>{statItem.label}</span>
+                <span className={s.percentage}>{statItem.percentage}%</span>
             </li>))}
             </ul>
     </section>)

@@ -1,0 +1,27 @@
+.transactionHistory {
+  width: 900px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto auto;
+  margin-top: 50px;
+}
+.head {
+  background-color: cornflowerblue;
+  color: aliceblue;
+}
+
+.title {
+  width: 300px;
+  padding: 20px;
+}
+.transactionHistory td {
+  padding: 15px 10px 15px 10px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(231, 231, 231);
+}

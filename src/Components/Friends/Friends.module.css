@@ -1,0 +1,45 @@
+.online {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(4, 190, 4);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.offline {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(189, 7, 7);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.friendsList {
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  margin-right: 50px;
+  width: 60px;
+}
+.name {
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 15px;
+}
